@@ -1,2 +1,2 @@
-# Paradigmas_Programaci-n
+# Paradigmas_Programación
 Ejercicios y temas sobre Paradigmas de Programación
