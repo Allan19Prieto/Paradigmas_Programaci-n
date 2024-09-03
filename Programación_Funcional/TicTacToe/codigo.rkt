@@ -1,6 +1,5 @@
 #lang scheme
 
-
 ;; Representación del tablero
 (define empty-board '((#f #f #f) (#f #f #f) (#f #f #f)))
 
