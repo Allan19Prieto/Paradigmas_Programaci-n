@@ -12,3 +12,5 @@ inversa([X|L1],L2,L3):-inversa(L1,[X|L2],L3).
 %   True
 
 
+
+
