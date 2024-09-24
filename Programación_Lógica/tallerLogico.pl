@@ -47,4 +47,31 @@ miembro(X,[_|R]):-miembro(X,R).
 
 % 2.5 **************************
 
+inversa(L1, L2) :-inversa(L1, L2).
 
+inversa_aux(L,R):-inversa_aux(L,[],R).
+inversa_aux([],Respuesta,Respuesta).
+inversa_aux([C|L1],Respuesta,R):-inversa_aux(L1,[C|Respuesta],R).
+
+% 2.6 **************************
+
+longitud([],0).
+longitud([_|R],N):-longitud(R,N1), N is N1 + 1.  
+
+% 2.7 *************************
+
+acontecimiento(1960, 'El Programa Apolo').
+acontecimiento(1950, 'La Guerra de Corea').
+acontecimiento(1986, 'El accidente de Chernóbil').
+
+fechaevento:-
+    write('Digite la fecha '),nl,
+    read(Fecha),
+    acontecimiento(Fecha,R),
+    write('En el '),write(Fecha),write(' sucedio '),write(R), nl.
+
+fechaevento:-
+    write('No hay un acontecimiento para la fecha').
+    
+    
+    
