@@ -30,13 +30,21 @@ presta(lapiz,juan,pedro).
 % pedro presta el borrador a juan
 presta(borrador,pedro,juan).
 
-% 2.3 
+% 2.3 **************************
 varon(albert).
 varon(edward).
 mujer(alice).
 mujer(victoria).
 padres(edward,victoria,albert).
-padres(alice,vistoria,albert).
+padres(alice,victoria,albert).
 
+% Regla hermana_de(X,Y)
+hermana_de(X,Y):-padres(X,A,B),padres(Y,A,B).
+
+% 2.4 ***************************
+miembro(X,[X|_]).
+miembro(X,[_|R]):-miembro(X,R).
+
+% 2.5 **************************
 
 
